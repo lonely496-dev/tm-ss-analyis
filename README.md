@@ -109,7 +109,7 @@ The notebook includes:
 ### 1. Clone the repository
 
 ```
-git clone https://github.com/your-username/time-series-forecasting-explainability.git
+git clone https://github.com/lonely496-dev/time-series-forecasting-explainability.git
 cd time-series-forecasting-explainability
 ```
 
