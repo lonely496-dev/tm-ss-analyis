@@ -1,4 +1,4 @@
-# 📊 Time Series Forecasting and Explainability  
+# 📊 Interpretable Time Series Forecasting using SARIMAX and Random Forest
 ### *Interpreting Model Behavior in Sequential Data*
 
 ---
