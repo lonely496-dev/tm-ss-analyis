@@ -1,3 +1,4 @@
+
 # 📊 Time Series Forecasting with SHAP-Based Model Interpretation
 
 <p align="left">
@@ -8,7 +9,7 @@
   <img src="https://img.shields.io/badge/Explainability-SHAP-purple.svg">
 </p>
 
-A structured time series forecasting project that combines statistical and machine learning models with explainability techniques to understand how predictions are produced and which features influence model behavior.
+=======
 
 ---
 
@@ -83,6 +84,52 @@ SHAP and permutation importance are used to explain both global feature importan
 
 ---
 
+<<<<<<< HEAD
+=======
+## 📈 Visual Analysis
+
+The notebook includes:
+
+- Time series trend visualization  
+- Seasonal decomposition  
+- Autocorrelation and partial autocorrelation plots  
+- Prediction vs actual comparison  
+- Residual diagnostics  
+- SHAP summary and waterfall plots  
+
+---
+
+## 📊 Key Insights
+
+- Recent observations (lag features) strongly influence predictions  
+- Seasonal patterns contribute consistently across time  
+- Machine learning models capture nonlinear effects better than statistical models  
+- Explainability methods provide clarity on model decision pathways  
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```
+git clone https://github.com/lonely496-dev/time-series-forecasting-explainability.git
+cd time-series-forecasting-explainability
+```
+
+### 2. Install dependencies
+
+```
+pip install -r requirements.txt
+```
+
+### 3. Run the notebook
+
+```
+jupyter notebook
+```
+
+>>>>>>> 891381a5b09a925c6590d4c7bde8478ef70a4ed6
 ---
 
 ## 🛠️ Technologies Used
