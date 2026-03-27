@@ -1,166 +1,113 @@
-# 📊 Time Series Forecasting and Explainability  
-### *Interpreting Model Behavior in Sequential Data*
+# 📊 Time Series Forecasting with SHAP-Based Model Interpretation
+
+<p align="left">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue.svg">
+  <img src="https://img.shields.io/badge/Status-Completed-success.svg">
+  <img src="https://img.shields.io/badge/License-MIT-green.svg">
+  <img src="https://img.shields.io/badge/Type-Time%20Series-orange.svg">
+  <img src="https://img.shields.io/badge/Explainability-SHAP-purple.svg">
+</p>
+
+A structured time series forecasting project that combines statistical and machine learning models with explainability techniques to understand how predictions are produced and which features influence model behavior.
 
 ---
 
-## 🔍 Overview
+## 🔍 Project Overview
 
-This project presents a structured approach to time series forecasting combined with model interpretability. The goal is not only to generate accurate predictions, but also to understand how and why those predictions are made.
-
-The workflow integrates statistical and machine learning methods, supported by explainability techniques that reveal the contribution of each feature over time.
+This project develops a complete forecasting workflow for sequential data and integrates interpretability methods to explain model decisions. It compares multiple approaches, evaluates forecast performance using time-aware validation, and highlights the drivers behind predictions.
 
 ---
 
-## 🎯 Objectives
+## ✨ Key Features
 
-- Develop a reliable time series forecasting pipeline  
-- Compare different modeling approaches  
-- Apply feature engineering tailored to temporal data  
-- Evaluate model performance using time-aware validation  
-- Interpret predictions using explainability techniques  
+- Time-based feature engineering (lags, rolling statistics, trend)
+- Forecast benchmarking with proper time series validation
+- Combination of statistical and machine learning models
+- Model interpretation using SHAP and permutation importance
+- Visual diagnostics for performance and residual analysis
 
 ---
 
-## 🧠 Key Features
+## 🤖 Models Used
 
-- Time-based feature engineering (lags, rolling statistics, trend)  
-- Multiple forecasting models:  
-  - Seasonal baseline model  
-  - SARIMAX (statistical approach)  
-  - Random Forest (machine learning approach)  
+- **Seasonal Naïve Model** – baseline benchmark  
+- **SARIMAX** – statistical model capturing trend and seasonality  
+- **Random Forest Regressor** – machine learning model for nonlinear patterns  
+
+---
+
+## 🧠 Techniques Applied
+
+- Time series decomposition (trend, seasonality, residuals)  
+- Lag feature creation and rolling window statistics  
+- Time-based train/test split  
 - Time series cross-validation  
 - Residual diagnostics and error analysis  
-- SHAP-based model explainability  
+- Permutation feature importance  
+- SHAP (SHapley Additive Explanations) for model interpretation  
 
 ---
 
-## 🏗️ Project Structure
+## 📊 Selected Visual Outputs
 
-```
-time-series-forecasting-explainability/
-│── data/                  # Input datasets
-│── notebooks/             # Main project notebook
-│── reports/
-│   └── figures/           # Generated visualizations
-│── requirements.txt       # Project dependencies
-│── README.md              # Project documentation
-│── .gitignore
-│── LICENSE
-```
+<p align="center">
+  <img src="figures/benchmark_forecast_interval.png" alt="Benchmark Forecast with Approximate Prediction Interval" width="900">
+</p>
+<p align="center"><em>Benchmark Forecast with Approximate Prediction Interval</em></p>
 
----
+<p align="center">
+  <img src="figures/top_permutation_importances.png" alt="Top Permutation Importances" width="760">
+</p>
+<p align="center"><em>Top Permutation Importances</em></p>
 
-## ⚙️ Methodology
-
-### 1. Data Preparation
-- Time series indexed and cleaned  
-- Missing values handled appropriately  
-- Data transformed for modeling  
-
-### 2. Feature Engineering
-- Lag features to capture temporal dependence  
-- Rolling mean and variance for trend smoothing  
-- Cyclical encoding for seasonal patterns  
-- Trend index to capture long-term movement  
-
-### 3. Modeling Approaches
-- Baseline Model: Seasonal naïve benchmark  
-- SARIMAX: Captures trend and seasonality  
-- Random Forest: Learns nonlinear relationships  
-
-### 4. Model Evaluation
-- Time-based train/test split  
-- Cross-validation for robustness  
-- Metrics:
-  - Mean Absolute Error (MAE)  
-  - Root Mean Squared Error (RMSE)  
-
-### 5. Explainability
-- SHAP values used to quantify feature influence  
-- Global importance and local explanations analyzed  
-- Feature contributions visualized across predictions  
+<p align="center">
+  <img src="figures/shap_waterfall_forecast.png" alt="SHAP Waterfall for Forecast" width="760">
+</p>
+<p align="center"><em>SHAP Waterfall for Forecast</em></p>
 
 ---
 
-## 📈 Visual Analysis
+## ⚙️ Method Summary
 
-The notebook includes:
+### Data Preparation
+The time series is cleaned, indexed, and structured to maintain temporal consistency. Missing values are handled to preserve patterns.
 
-- Time series trend visualization  
-- Seasonal decomposition  
-- Autocorrelation and partial autocorrelation plots  
-- Prediction vs actual comparison  
-- Residual diagnostics  
-- SHAP summary and waterfall plots  
+### Feature Engineering
+Lag variables, rolling statistics, and time-based encodings are used to capture short-term behavior and recurring seasonal effects.
 
----
+### Modeling
+The project compares baseline, statistical, and machine learning approaches to identify the most effective forecasting method.
 
-## 📊 Key Insights
-
-- Recent observations (lag features) strongly influence predictions  
-- Seasonal patterns contribute consistently across time  
-- Machine learning models capture nonlinear effects better than statistical models  
-- Explainability methods provide clarity on model decision pathways  
+### Interpretation
+SHAP and permutation importance are used to explain both global feature importance and individual predictions.
 
 ---
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
-
-```
-git clone https://github.com/your-username/time-series-forecasting-explainability.git
-cd time-series-forecasting-explainability
-```
-
-### 2. Install dependencies
-
-```
-pip install -r requirements.txt
-```
-
-### 3. Run the notebook
-
-```
-jupyter notebook
-```
 
 ---
 
 ## 🛠️ Technologies Used
 
 - Python  
-- Pandas & NumPy  
-- Matplotlib & Seaborn  
+- Pandas  
+- NumPy  
+- Matplotlib  
 - Scikit-learn  
 - Statsmodels  
 - SHAP  
 
 ---
 
-## 📌 Notes
+## 🚀 Running the Project
 
-- Ensure correct dataset path before running  
-- SHAP computations may take longer on large datasets  
-- Results may vary slightly depending on random initialization  
-
----
-
-## ✍️ Author
-
-This project is part of a broader focus on:
-- Data-driven modeling  
-- System behavior analysis  
-- Explainable artificial intelligence  
+```bash
+git clone https://github.com/your-username/time-series-forecasting-explainability.git
+cd time-series-forecasting-explainability
+pip install -r requirements.txt
+jupyter notebook
+```
 
 ---
 
-## 📜 License
+## 📌 Project Value
 
-This project is intended for academic and research purposes.
-
----
-
-## ⭐ Project Summary
-
-This work demonstrates that time series models can be both accurate and interpretable, making them more suitable for real-world decision-making where transparency matters.
+This project demonstrates that time series models can be evaluated not only by forecast accuracy, but also by how clearly their decisions can be interpreted. This improves transparency and supports better decision-making in real-world applications.
